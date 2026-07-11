@@ -1,0 +1,172 @@
+{
+    "schemaVersion": 1,
+    "generatedAt": "2026-07-11T20:32:05.506Z",
+    "extensions": {
+        "coraext-auggie": {
+            "name": "coraext-auggie",
+            "displayName": "Augment Code",
+            "version": "1.0.0",
+            "description": "Integrates Augment Code as an ACP adapter in CoraCowork.",
+            "author": "CoraCowork Official",
+            "engines": {
+                "coracowork": "^1.0.0"
+            },
+            "hubs": [
+                "acpAdapters"
+            ],
+            "contributes": {
+                "acpAdapters": [
+                    "auggie"
+                ]
+            },
+            "dist": {
+                "tarball": "coraext-auggie.zip",
+                "integrity": "sha256-478c98561e90d9cf1d42535abc62740cd84cae056e41590ba8e8f3afcc49a40a",
+                "unpackedSize": 3105
+            }
+        },
+        "coraext-claude": {
+            "name": "coraext-claude",
+            "displayName": "Claude Code",
+            "version": "1.0.0",
+            "description": "Integrates Anthropic's Claude Code CLI as an ACP adapter in CoraCowork.",
+            "author": "CoraCowork Official",
+            "engines": {
+                "coracowork": "^1.0.0"
+            },
+            "hubs": [
+                "acpAdapters"
+            ],
+            "contributes": {
+                "acpAdapters": [
+                    "claude"
+                ]
+            },
+            "dist": {
+                "tarball": "coraext-claude.zip",
+                "integrity": "sha256-26e6acc631c4d8809554e71281354661642c01fc6ad0dcb8c4ee451299e4fa87",
+                "unpackedSize": 2685
+            }
+        },
+        "coraext-codebuddy": {
+            "name": "coraext-codebuddy",
+            "displayName": "CodeBuddy",
+            "version": "1.0.0",
+            "description": "Integrates CodeBuddy as an ACP adapter in CoraCowork.",
+            "author": "CoraCowork Official",
+            "engines": {
+                "coracowork": "^1.0.0"
+            },
+            "hubs": [
+                "acpAdapters"
+            ],
+            "contributes": {
+                "acpAdapters": [
+                    "codebuddy"
+                ]
+            },
+            "dist": {
+                "tarball": "coraext-codebuddy.zip",
+                "integrity": "sha256-376fc03ee1fa58a1839719732d52a358c013d816f238f1958444990d5a3c1009",
+                "unpackedSize": 3553
+            }
+        },
+        "coraext-codex": {
+            "name": "coraext-codex",
+            "displayName": "Codex",
+            "version": "1.0.0",
+            "description": "Integrates OpenAI Codex CLI as an ACP adapter in CoraCowork.",
+            "author": "CoraCowork Official",
+            "engines": {
+                "coracowork": "^1.0.0"
+            },
+            "hubs": [
+                "acpAdapters"
+            ],
+            "contributes": {
+                "acpAdapters": [
+                    "codex"
+                ]
+            },
+            "dist": {
+                "tarball": "coraext-codex.zip",
+                "integrity": "sha256-fa296bacc2f9f4833e0d81d5f9f95c2f4ab8c61bd9f5ac6de291a2e1fa4c10d9",
+                "unpackedSize": 2201
+            }
+        },
+        "coraext-goose": {
+            "name": "coraext-goose",
+            "displayName": "Goose",
+            "version": "1.0.0",
+            "description": "Integrates Goose as an ACP adapter in CoraCowork.",
+            "author": "CoraCowork Official",
+            "engines": {
+                "coracowork": "^1.0.0"
+            },
+            "hubs": [
+                "acpAdapters"
+            ],
+            "contributes": {
+                "acpAdapters": [
+                    "goose"
+                ]
+            },
+            "dist": {
+                "tarball": "coraext-goose.zip",
+                "integrity": "sha256-e3a9856e42a1091412e96e4823fad3aaab441052df0cc3662902ffdc31f73893",
+                "unpackedSize": 3693
+            }
+        },
+        "coraext-opencode": {
+            "name": "coraext-opencode",
+            "displayName": "OpenCode",
+            "version": "1.0.0",
+            "description": "Integrates OpenCode as an ACP adapter in CoraCowork.",
+            "author": "CoraCowork Official",
+            "engines": {
+                "coracowork": "^1.0.0"
+            },
+            "hubs": [
+                "acpAdapters"
+            ],
+            "contributes": {
+                "acpAdapters": [
+                    "opencode"
+                ]
+            },
+            "dist": {
+                "tarball": "coraext-opencode.zip",
+                "integrity": "sha256-345eea49473777dfb9a6077e8a5947ac67e69ef0ca5a98985b39a6d4f7d8e558",
+                "unpackedSize": 2515
+            }
+        },
+        "coraext-qwen": {
+            "name": "coraext-qwen",
+            "displayName": "Qwen Code",
+            "version": "1.0.0",
+            "description": "Integrates Qwen CLI as an ACP adapter in CoraCowork.",
+            "author": "CoraCowork Official",
+            "engines": {
+                "coracowork": "^1.0.0"
+            },
+            "hubs": [
+                "acpAdapters"
+            ],
+            "contributes": {
+                "acpAdapters": [
+                    "qwen"
+                ]
+            },
+            "dist": {
+                "tarball": "coraext-qwen.zip",
+                "integrity": "sha256-98daa8e8e9f7a146a561a4dc54d0eaef1296799ff9adcf441b401c760c6c67c3",
+                "unpackedSize": 2777
+            }
+        }
+    },
+    "metadata": {
+        "totalExtensions": 7,
+        "generatedBy": "Cora Extension Builder v1.0.0",
+        "repository": "https://github.com/coracowork/CoraHub"
+    }
+}
