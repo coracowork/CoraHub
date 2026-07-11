@@ -1,0 +1,33 @@
+{
+  "$schema": "https://github.com/coracowork/CoraHub/spec/v0/extension-manifest.schema.json",
+  "author": "CoraCowork Official",
+  "contributes": {
+    "acpAdapters": [
+      {
+        "id": "auggie",
+        "name": "Augment Code",
+        "icon": "resources/icon.svg",
+        "description": "Official Augment Code adapter",
+        "cliCommand": "auggie",
+        "defaultCliPath": "bunx @augmentcode/auggie",
+        "acpArgs": ["--acp"]
+      }
+    ]
+  },
+  "description": "Integrates Augment Code as an ACP adapter in CoraCowork.",
+  "displayName": "Augment Code",
+  "engine": {
+    "coracowork": "^1.0.0"
+  },
+  "lifecycle": {
+    "onInstall": {
+      "shell": {
+        "cliCommand": "bun",
+        "args": ["run", "scripts/install.ts"]
+      },
+      "timeout": 30000
+    }
+  },
+  "name": "coraext-auggie",
+  "version": "1.0.0"
+}

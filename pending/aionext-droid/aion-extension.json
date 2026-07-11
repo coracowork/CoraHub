@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/coracowork/CoraHub/spec/v0/extension-manifest.schema.json",
+  "author": "CoraCowork Official",
+  "contributes": {
+    "acpAdapters": [
+      {
+        "id": "droid",
+        "name": "Droid",
+        "icon": "resources/icon.svg",
+        "description": "Official Factory Droid adapter",
+        "connectionType": "stdio",
+        "cliCommand": "droid",
+        "defaultCliPath": "bunx droid",
+        "authRequired": true,
+        "supportsStreaming": false,
+        "acpArgs": ["exec", "--output-format", "acp"]
+      }
+    ]
+  },
+  "description": "Integrates Factory Droid as an ACP adapter in CoraCowork.",
+  "displayName": "Droid",
+  "engine": {
+    "coracowork": "^1.0.0"
+  },
+  "lifecycle": {
+    "onInstall": {
+      "shell": {
+        "cliCommand": "bun",
+        "args": ["add", "-g", "--trust", "droid"]
+      },
+      "timeout": 60000
+    }
+  },
+  "name": "coraext-droid",
+  "version": "1.0.0"
+}

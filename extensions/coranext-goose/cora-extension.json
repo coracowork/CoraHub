@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/iOfficeAI/AionHub/spec/v0/extension-manifest.schema.json",
+  "author": "CoraCowork Official",
+  "contributes": {
+    "acpAdapters": [
+      {
+        "id": "goose",
+        "name": "Goose",
+        "icon": "resources/icon.svg",
+        "description": "Official Goose adapter",
+        "cliCommand": "goose",
+        "acpArgs": ["acp"],
+        "skillsDirs": [".goose/skills"]
+      }
+    ]
+  },
+  "description": "Integrates Goose as an ACP adapter in CoraCowork.",
+  "displayName": "Goose",
+  "engine": {
+    "coracowork": "^1.0.0"
+  },
+  "lifecycle": {
+    "onInstall": {
+      "shell": {
+        "cliCommand": "bun",
+        "args": ["run", "scripts/install.ts"]
+      },
+      "timeout": 120000
+    }
+  },
+  "name": "coraext-goose",
+  "version": "1.0.0"
+}

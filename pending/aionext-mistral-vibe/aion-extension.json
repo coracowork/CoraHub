@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/coracowork/CoraHub/spec/v0/extension-manifest.schema.json",
+  "author": "CoraCowork Official",
+  "contributes": {
+    "acpAdapters": [
+      {
+        "id": "mistral-vibe",
+        "name": "Mistral Vibe",
+        "icon": "resources/icon.svg",
+        "description": "Official Mistral Vibe adapter",
+        "connectionType": "stdio",
+        "cliCommand": "vibe-acp",
+        "authRequired": true,
+        "supportsStreaming": false
+      }
+    ]
+  },
+  "description": "Integrates Mistral Vibe as an ACP adapter in CoraCowork.",
+  "displayName": "Mistral Vibe",
+  "engine": {
+    "coracowork": "^1.0.0"
+  },
+  "lifecycle": {
+    "onInstall": {
+      "shell": {
+        "cliCommand": "bun",
+        "args": ["run", "scripts/install.ts"]
+      },
+      "timeout": 120000
+    }
+  },
+  "name": "coraext-mistral-vibe",
+  "version": "1.0.0"
+}

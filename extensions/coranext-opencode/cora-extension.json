@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/coracowork/CoraHub/spec/v0/extension-manifest.schema.json",
+  "author": "CoraCowork Official",
+  "contributes": {
+    "acpAdapters": [
+      {
+        "id": "opencode",
+        "name": "OpenCode",
+        "icon": "resources/icon.svg",
+        "description": "Official OpenCode adapter",
+        "cliCommand": "opencode",
+        "defaultCliPath": "bunx opencode-ai",
+        "acpArgs": ["acp"]
+      }
+    ]
+  },
+  "description": "Integrates OpenCode as an ACP adapter in CoraCowork.",
+  "displayName": "OpenCode",
+  "engine": {
+    "coracowork": "^1.0.0"
+  },
+  "lifecycle": {
+    "onInstall": {
+      "shell": {
+        "cliCommand": "bun",
+        "args": ["run", "scripts/install.ts"]
+      },
+      "timeout": 60000
+    }
+  },
+  "name": "coraext-opencode",
+  "version": "1.0.0"
+}

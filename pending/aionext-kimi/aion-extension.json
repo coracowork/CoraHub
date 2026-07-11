@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/coracowork/CoraHub/spec/v0/extension-manifest.schema.json",
+  "author": "CoraCowork Official",
+  "contributes": {
+    "acpAdapters": [
+      {
+        "id": "kimi",
+        "name": "Kimi Code",
+        "icon": "resources/icon.svg",
+        "description": "Official Kimi Code adapter",
+        "connectionType": "stdio",
+        "cliCommand": "kimi",
+        "authRequired": true,
+        "supportsStreaming": false,
+        "acpArgs": ["acp"]
+      }
+    ]
+  },
+  "description": "Integrates Kimi Code CLI as an ACP adapter in CoraCowork.",
+  "displayName": "Kimi Code",
+  "engine": {
+    "coracowork": "^1.0.0"
+  },
+  "lifecycle": {
+    "onInstall": {
+      "shell": {
+        "cliCommand": "bun",
+        "args": ["run", "scripts/install.ts"]
+      },
+      "timeout": 120000
+    }
+  },
+  "name": "coraext-kimi",
+  "version": "1.0.0"
+}

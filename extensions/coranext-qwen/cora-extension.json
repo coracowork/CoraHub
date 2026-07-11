@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/coracowork/CoraHub/spec/v0/extension-manifest.schema.json",
+  "author": "CoraCowork Official",
+  "contributes": {
+    "acpAdapters": [
+      {
+        "id": "qwen",
+        "name": "Qwen Code",
+        "icon": "resources/icon.svg",
+        "description": "Official Qwen Code adapter",
+        "cliCommand": "qwen",
+        "defaultCliPath": "bunx @qwen-code/qwen-code",
+        "acpArgs": ["--acp"],
+        "skillsDirs": [".qwen/skills"]
+      }
+    ]
+  },
+  "description": "Integrates Qwen CLI as an ACP adapter in CoraCowork.",
+  "displayName": "Qwen Code",
+  "engine": {
+    "coracowork": "^1.0.0"
+  },
+  "lifecycle": {
+    "onInstall": {
+      "shell": {
+        "cliCommand": "bun",
+        "args": ["run", "scripts/install.ts"]
+      },
+      "timeout": 30000
+    }
+  },
+  "name": "coraext-qwen",
+  "version": "1.0.0"
+}

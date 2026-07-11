@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/coracowork/CoraHub/spec/v0/extension-manifest.schema.json",
+  "author": "CoraCowork Official",
+  "contributes": {
+    "acpAdapters": [
+      {
+        "id": "codex",
+        "name": "Codex",
+        "icon": "resources/icon.svg",
+        "description": "Official OpenAI Codex adapter (via ACP adapter)",
+        "cliCommand": "codex",
+        "defaultCliPath": "bunx @zed-industries/codex-acp",
+        "acpArgs": [],
+        "skillsDirs": [".codex/skills"]
+      }
+    ]
+  },
+  "description": "Integrates OpenAI Codex CLI as an ACP adapter in CoraCowork.",
+  "displayName": "Codex",
+  "engine": {
+    "coracowork": "^1.0.0"
+  },
+  "lifecycle": {
+    "onInstall": {
+      "shell": {
+        "cliCommand": "bun",
+        "args": ["run", "scripts/install.ts"]
+      },
+      "timeout": 120000
+    }
+  },
+  "name": "coraext-codex",
+  "version": "1.0.0"
+}

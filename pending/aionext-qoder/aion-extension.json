@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/coracowork/CoraHub/spec/v0/extension-manifest.schema.json",
+  "author": "CoraCowork Official",
+  "contributes": {
+    "acpAdapters": [
+      {
+        "id": "qoder",
+        "name": "Qoder CLI",
+        "icon": "resources/icon.png",
+        "description": "Official Qoder CLI adapter",
+        "connectionType": "stdio",
+        "cliCommand": "qodercli",
+        "defaultCliPath": "bunx @qoder-ai/qodercli",
+        "authRequired": true,
+        "supportsStreaming": false,
+        "acpArgs": ["--acp"]
+      }
+    ]
+  },
+  "description": "Integrates Qoder CLI as an ACP adapter in CoraCowork.",
+  "displayName": "Qoder CLI",
+  "engine": {
+    "coracowork": "^1.0.0"
+  },
+  "lifecycle": {
+    "onInstall": {
+      "shell": {
+        "cliCommand": "bun",
+        "args": ["add", "-g", "--trust", "@qoder-ai/qodercli"]
+      },
+      "timeout": 60000
+    }
+  },
+  "name": "coraext-qoder",
+  "version": "1.0.0"
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/coracowork/CoraHub/spec/v0/extension-manifest.schema.json",
+  "author": "CoraCowork Official",
+  "contributes": {
+    "acpAdapters": [
+      {
+        "id": "openclaw-gateway",
+        "name": "OpenClaw",
+        "icon": "resources/icon.svg",
+        "description": "Official OpenClaw adapter",
+        "connectionType": "stdio",
+        "cliCommand": "openclaw",
+        "defaultCliPath": "bunx openclaw",
+        "authRequired": false,
+        "supportsStreaming": true,
+        "acpArgs": ["acp"]
+      }
+    ]
+  },
+  "description": "Integrates OpenClaw as an ACP adapter in CoraCowork.",
+  "displayName": "OpenClaw",
+  "engine": {
+    "coracowork": "^1.0.0"
+  },
+  "lifecycle": {
+    "onInstall": {
+      "shell": {
+        "cliCommand": "bun",
+        "args": ["add", "-g", "openclaw"]
+      },
+      "timeout": 30000
+    }
+  },
+  "name": "coraext-openclaw-gateway",
+  "version": "1.0.0"
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/coracowork/CoraHub/spec/v0/extension-manifest.schema.json",
+  "author": "CoraCowork Official",
+  "contributes": {
+    "acpAdapters": [
+      {
+        "id": "codebuddy",
+        "name": "CodeBuddy",
+        "icon": "resources/icon.svg",
+        "description": "Official CodeBuddy adapter",
+        "cliCommand": "codebuddy",
+        "defaultCliPath": "bunx @tencent-ai/codebuddy-code",
+        "acpArgs": ["--acp"],
+        "skillsDirs": [".codebuddy/skills"]
+      }
+    ]
+  },
+  "description": "Integrates CodeBuddy as an ACP adapter in CoraCowork.",
+  "displayName": "CodeBuddy",
+  "engine": {
+    "coracowork": "^1.0.0"
+  },
+  "lifecycle": {
+    "onInstall": {
+      "shell": {
+        "cliCommand": "bun",
+        "args": ["run", "scripts/install.ts"]
+      },
+      "timeout": 30000
+    }
+  },
+  "name": "coraext-codebuddy",
+  "version": "1.0.0"
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/coracowork/CoraHub/spec/v0/extension-manifest.schema.json",
+  "author": "CoraCowok Official",
+  "contributes": {
+    "acpAdapters": [
+      {
+        "id": "copilot",
+        "name": "GitHub Copilot",
+        "icon": "resources/icon.svg",
+        "description": "Official GitHub Copilot adapter",
+        "connectionType": "stdio",
+        "cliCommand": "copilot",
+        "defaultCliPath": "bunx @github/copilot",
+        "acpArgs": ["--acp"],
+        "authRequired": true,
+        "supportsStreaming": false
+      }
+    ]
+  },
+  "description": "Integrates GitHub Copilot as an ACP adapter in CoraCowork.",
+  "displayName": "GitHub Copilot",
+  "engine": {
+    "coracowork": "^1.0.0"
+  },
+  "lifecycle": {
+    "onInstall": {
+      "shell": {
+        "cliCommand": "bun",
+        "args": ["install", "-g", "@github/copilot"]
+      },
+      "timeout": 60000
+    }
+  },
+  "name": "coraext-copilot",
+  "version": "1.0.0"
+}

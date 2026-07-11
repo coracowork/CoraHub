@@ -1,0 +1,39 @@
+{
+    "$schema": "https://raw.githubusercontent.com/coracowork/CoraHub/spec/v0/extension-manifest.schema.json",
+    "author": "CoraCowork Official",
+    "contributes": {
+        "acpAdapters": [
+            {
+                "id": "kiro",
+                "name": "Kiro CLI",
+                "description": "Official Kiro CLI adapter (AWS)",
+                "connectionType": "stdio",
+                "cliCommand": "kiro-cli",
+                "authRequired": true,
+                "supportsStreaming": false,
+                "acpArgs": [
+                    "acp"
+                ]
+            }
+        ]
+    },
+    "description": "Integrates Kiro CLI as an ACP adapter in CoraCowork.",
+    "displayName": "Kiro CLI",
+    "engine": {
+        "coracowork": "^1.0.0"
+    },
+    "lifecycle": {
+        "onInstall": {
+            "shell": {
+                "cliCommand": "bun",
+                "args": [
+                    "run",
+                    "scripts/install.ts"
+                ]
+            },
+            "timeout": 120000
+        }
+    },
+    "name": "coraext-kiro",
+    "version": "1.0.0"
+}
